@@ -14,3 +14,8 @@ async def back_handler(message: Message, state: FSMContext):
     """
     await start_handler(message, state)
 
+
+
+
+
+    print('----')
