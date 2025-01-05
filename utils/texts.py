@@ -140,3 +140,31 @@ SUCCESS_COLLABORATION = \
 """
 Sizning xabaringiz adminga yuborildi ✅. Tez orada siz bilan bog'lanishadi 📞.
 """
+
+
+
+def order(**kwargs):
+    order = ''
+    
+    order += f"🤩 <b>Mahsulot:</b> {kwargs['product']}\n"
+    order += f"🎨 <b>Mahsulot Rangi:</b> {kwargs['color']}\n"
+    order += f"📏 <b>Mahsulot O'lchami:</b> {kwargs['size']}\n"
+    order += f"🛒 <b>Mahsulot Miqdori:</b> {kwargs['quantity']} ta\n"
+    order += f"💵 <b>Mahsulot Narxi:</b> {kwargs['price']}\n"
+    order += f"💰 <b>Umumiy Narxi:</b> {kwargs['item_total_price']}\n"
+    
+    return order
+
+    
+    
+
+ORDER_TEXT = \
+"""
+{} Sizning Buyurtmalaringiz.
+"""
+
+
+ORDER_NOT = \
+"""
+Hozircha sizda hech qanday buyurtma mavjud emas. 
+"""

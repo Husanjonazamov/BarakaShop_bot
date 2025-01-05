@@ -10,7 +10,7 @@ def set_webapp_button(webapp_url):
         "type": "web_app",
         "text": "Bozor",
         "web_app": {
-            "url": webapp_url
+            "url": webapp_url                                                                   
         }
     }
 

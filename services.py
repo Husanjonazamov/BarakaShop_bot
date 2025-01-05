@@ -49,10 +49,6 @@ def putPhone(user_id, phone):
     
     
 
-
-
-
-
 def getAbout():
     url = f"{BASE_URL}/about/"
     response = requests.get(url)
@@ -63,3 +59,14 @@ def getAbout():
     else:
         print(response.status_code)
         
+
+def getOrder(user_id):
+    url = f"{BASE_URL}/order/{user_id}"
+    response = requests.get(url)
+    print(response.status_code)
+
+    if response.status_code == 200:
+        data = response.json()
+        return data 
+    else:
+        print(response.status_code)    

@@ -7,5 +7,6 @@ from . import menu
 from . import register
 from . import collabration  
 from . import feedback
+from . import order
 from . import about
 from . import myprofile
