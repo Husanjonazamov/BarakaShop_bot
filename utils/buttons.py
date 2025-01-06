@@ -1,5 +1,5 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-
+from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
 COLLABORATION = "🤝 Hamkorlik"
@@ -80,3 +80,4 @@ MYPROFILE_SETTINGS = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
