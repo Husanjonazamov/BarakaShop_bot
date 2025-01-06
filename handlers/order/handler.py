@@ -12,8 +12,6 @@ from services import getOrder
 async def order_handler(message: Message, state: FSMContext):
     user_id = message.from_user.id
     orders = getOrder(user_id)
-    
-
 
     if orders and orders[0].get('order_items'):  
         for item in orders[0]['order_items']:
@@ -24,7 +22,7 @@ async def order_handler(message: Message, state: FSMContext):
             quantity = item['quantity']
             price = int(float(item['price']))
             item_total_price = item_total_price
-            main_image = item['product'].get('main_image', None)
+            main_image = item['product']['main_image']
             
         order_item = texts.order(
             product=product,
@@ -43,5 +41,4 @@ async def order_handler(message: Message, state: FSMContext):
         else:
             await message.answer(order_item)
     else:
-        # Agar buyurtmalar bo'lmasa
-        await message.answer("Hozircha sizda hech qanday buyurtma mavjud emas.")
+        await message.answer(texts.ORDER_NOT)
