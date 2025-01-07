@@ -21,10 +21,10 @@ async def download_and_send_image(image_urls: list, caption: str, message: types
 
                             os.remove(tmp_file.name)
                     else:
-                        await message.answer("Rasmni olishda xatolik yuz berdi.")
+                        print('---')
                         return
             except Exception as e:
-                await message.answer(f"Xatolik yuz berdi: {e}")
+                print(f"error: {e}")
                 return
 
     if media_files:
