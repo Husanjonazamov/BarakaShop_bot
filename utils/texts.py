@@ -168,3 +168,10 @@ ORDER_NOT = \
 """
 Hozircha sizda hech qanday buyurtma mavjud emas. 
 """
+
+
+
+UNTEXT = \
+"""
+sizni bozorimizda koʼrib turganimizdan hursandmiz marhamat bozorga qarab yoʼl oling hammasi qoʼlingizda bozor tugmasini bosing deb chiqsin
+"""
