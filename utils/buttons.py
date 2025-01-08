@@ -2,16 +2,16 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from utils.env import WEBAPP_URL
 
-COLLABORATION = "🤝 Hamkorlik"
-FEEDBACK = "💬 Fikr bildirish"
-MYORDER = "🛒 Buyurtmalarim"
-MYPROFILE = "👤 Shaxsiy Ma'lumotlarim"
-ABOUT = "🤖 Bot haqida ma'lumot"
+COLLABORATION = "Hamkorlik"
+FEEDBACK = "Fikr bildirish"
+MYORDER = "Buyurtmalarim"
+MYPROFILE = "Shaxsiy Ma'lumotlarim"
+ABOUT = "Bot haqida ma'lumot"
 
 
 MENU = {
         "keyboard": [
-            [{"text": "🛍 Bozor", "web_app": {"url": WEBAPP_URL}}],
+            [{"text": "Bozor", "web_app": {"url": WEBAPP_URL}}],
             [{"text": COLLABORATION}],
             [{"text": FEEDBACK}, {"text": MYORDER}],
             [{"text": MYPROFILE}, {"text": ABOUT}],
