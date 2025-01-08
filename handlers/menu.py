@@ -4,7 +4,7 @@ from aiogram.dispatcher import FSMContext
 from aiogram.types import Message
 
 # kode import
-from loader import dp
+from loader import dp, bot
 from utils.webapp import set_webapp_button 
 from utils.env import WEBAPP_URL
 from utils import texts, buttons
@@ -19,7 +19,15 @@ async def Menu(message: Message, state: FSMContext):
     user_id = message.from_user.id
     user = getUser(user_id)
     
+    
+   
+    
     set_webapp_button(WEBAPP_URL)
-    await message.answer(texts.MENU.format(message.from_user.first_name), reply_markup=buttons.MENU)
+    await bot.send_message(
+        chat_id=user_id,
+        text=texts.MENU.format(message.from_user.first_name),
+        reply_markup=buttons.MENU
+        
+    )
 
     await state.finish()

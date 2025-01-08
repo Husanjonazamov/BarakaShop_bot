@@ -1,6 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
+from utils.env import WEBAPP_URL
 
 COLLABORATION = "🤝 Hamkorlik"
 FEEDBACK = "💬 Fikr bildirish"
@@ -9,23 +9,15 @@ MYPROFILE = "👤 Shaxsiy Ma'lumotlarim"
 ABOUT = "🤖 Bot haqida ma'lumot"
 
 
-MENU = ReplyKeyboardMarkup(
-    keyboard=[
-        [
-            KeyboardButton(text=COLLABORATION)
+MENU = {
+        "keyboard": [
+            [{"text": "🛍 Bozor", "web_app": {"url": WEBAPP_URL}}],
+            [{"text": COLLABORATION}],
+            [{"text": FEEDBACK}, {"text": MYORDER}],
+            [{"text": MYPROFILE}, {"text": ABOUT}],
         ],
-        [
-            KeyboardButton(text=FEEDBACK),
-            KeyboardButton(text=MYORDER),
-        ],
-        [
-            KeyboardButton(text=MYPROFILE),
-            KeyboardButton(text=ABOUT),
-        ],
-    ],
-    resize_keyboard=True
-)
-
+        "resize_keyboard": True,
+    }
 
 
 BASE_BACK_TEXT = '🔙 Ortga'
