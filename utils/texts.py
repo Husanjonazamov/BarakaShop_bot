@@ -128,7 +128,7 @@ def collaboration(**kwargs):
     collaboration_text += f"Yangi xabar 📩:\n\n"
     collaboration_text += f"Ism ✨:  {kwargs['name']}\n"
     collaboration_text += f"Telefon raqam 📱:  {kwargs['phone']}\n"
-    collaboration_text += f"Username:  {kwargs[ 'username']}\n"
+    collaboration_text += f"Telegram:  @{kwargs[ 'username']}\n"
     collaboration_text += f"Manzil 📍:  {kwargs['location']}\n"
     collaboration_text += f"Ma'lumot 📝: {kwargs['info']}\n"
     
