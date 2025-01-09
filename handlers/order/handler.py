@@ -53,3 +53,6 @@ async def order_handler(message: Message, state: FSMContext):
                         await message.answer(order_item)
     else:
         await message.answer(texts.ORDER_NOT)
+    user_id = message.from_user.id
+    text = texts.UNTEXT
+    buttons.send_webapp_texts(user_id, text)

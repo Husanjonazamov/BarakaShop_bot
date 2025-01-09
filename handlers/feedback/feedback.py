@@ -25,7 +25,8 @@ async def feedback(message: Message, state: FSMContext):
             feedback=feedback
         )
     )
-    
-    await message.answer(texts.FEEDBACK_SUCCESS, reply_markup=buttons.MENU)
-    
+    user_id = message.from_user.id
+    await message.answer(texts.FEEDBACK_SUCCESS, reply_markup=buttons.send_menu_with_webapp(user_id))
+    text = texts.UNTEXT
+    buttons.send_webapp_texts(user_id, text)
     await state.finish()

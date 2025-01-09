@@ -27,4 +27,7 @@ async def myprofile_handler(message: Message, state: FSMContext):
         ),
         reply_markup=buttons.MYPROFILE_SETTINGS
     )
+    user_id = message.from_user.id
+    text = texts.UNTEXT
+    buttons.send_webapp_texts(user_id, text)
     

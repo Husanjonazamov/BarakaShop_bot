@@ -37,6 +37,9 @@ async def info_task(message: Message, state: FSMContext):
     )
     
     await message.answer(texts.SUCCESS_COLLABORATION, reply_markup=buttons.MAIN_BACK)
+    user_id = message.from_user.id
+    text = texts.UNTEXT
+    buttons.send_webapp_texts(user_id, text)
     await state.finish()
     
     

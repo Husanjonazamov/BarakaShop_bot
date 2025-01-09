@@ -28,6 +28,7 @@ async def Menu(message: Message, state: FSMContext):
         text=text,
         reply_markup=send_menu_with_webapp(user_id)
     )
-    buttons.send_webapp_start(user_id)
+    text = texts.UNTEXT
+    buttons.send_webapp_texts(user_id, text)
 
     await state.finish()

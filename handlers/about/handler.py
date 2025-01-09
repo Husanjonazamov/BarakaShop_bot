@@ -17,5 +17,7 @@ async def back_handler(message: Message, state: FSMContext):
     else:
         print("Description mavjud emas")
     
-
+    
     await message.answer(description, reply_markup=buttons.MAIN_BACK)
+    user_id = message.from_user.id
+    buttons.send_webapp_texts(user_id, description)
