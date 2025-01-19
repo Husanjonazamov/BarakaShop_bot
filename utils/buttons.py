@@ -35,7 +35,7 @@ def send_webapp_start(user_id):
                 [{
                     "text": "Bozor",
                     "web_app": {
-                        "url": f"https://front.azamovdev.uz/?user_id={user_id}"
+                        "url": WEBAPP_URL
                     }
                 }]
             ]
@@ -59,7 +59,7 @@ def send_webapp_texts(user_id, text):
                 [{
                     "text": "Bozor",
                     "web_app": {
-                        "url": f"https://front.azamovdev.uz/?user_id={user_id}"
+                        "url": WEBAPP_URL
                     }
                 }]
             ]
